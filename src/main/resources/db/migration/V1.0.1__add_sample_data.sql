@@ -1,0 +1,2 @@
+insert into safebox(id, name, password, items)
+values ('1bb1a31d-b525-4ee3-b4c3-5e8fe49c1af5', 'rviewer', '36f028580bb02cc8272a9a020f4200e346e276ae664e45ee80745574e2f5ab80', '{"test item 1","test item 2"}')

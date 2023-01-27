@@ -1,0 +1,25 @@
+# Application
+application:
+  title: Java skeleton
+  version: 1.0.0
+
+# Server
+server:
+  port: 8080
+  shutdown: graceful
+
+# Spring datasource
+spring:
+  datasource:
+    username: rv_user
+    password: rv_password
+    url: "jdbc:postgresql://localhost:5432/postgres_rv_database"
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: validate
+      open-in-view: false
+  lifecycle:
+    timeout-per-shutdown-phase: 10s
