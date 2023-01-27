@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "de4fc598-0cd4-4a3d-988c-62df22fca896",
+		"name": "Unsafebox",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST - Create Safebox",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Secure safebox 02\",\r\n    \"password\" : \"extremelySecurePassword1!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/safebox"
+			},
+			"response": []
+		},
+		{
+			"name": "GET - List safebox content",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "rviewer",
+						"password": "test"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/safebox/1bb1a31d-b525-4ee3-b4c3-5e8fe49c1af5/items"
+			},
+			"response": []
+		},
+		{
+			"name": "PUT - Add items",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "test",
+						"username": "rviewer"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"items\": [\r\n    \"Safebox content 05\",\r\n    \"Safebox content 02\",\r\n    \"Safebox content 01\",\r\n    \"New safebox content\"\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/safebox/1bb1a31d-b525-4ee3-b4c3-5e8fe49c1af5/items"
+			},
+			"response": []
+		}
+	]
+}
